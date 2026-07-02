@@ -28,3 +28,19 @@ int main() {
         attempts--;
         std::cout << "Remaining attempts: " << attempts << "\n";
     }
+
+    if (guess != secret)
+        std::cout << "Secret number was " << secret << "\n";
+
+    char confirm;
+    std::cout << "Approve your score? (y/n): ";
+    std::cin >> confirm;
+
+    if (confirm == 'y' || confirm == 'Y')
+        std::cout << "Score saved.\n";
+    else
+        std::cout << "Score discarded.\n";
+
+    std::cout << "Game finished.\n";
+    return 0;
+}
